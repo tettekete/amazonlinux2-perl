@@ -1,0 +1,12 @@
+version: '3'
+services:
+  perl:
+    image: tettekete37564/amazonlinux2-perl-dev:1.0
+    container_name: "develop-with-perl"
+    build: ./
+    tty: true
+    ## To run just `docker-compose up`, write a `command` attribute as shown in the following comments.
+    # command: bash --login -c "cd /program/dir && perl your-script.pl"
+    volumes:
+      - .:/docker/scripts
+
